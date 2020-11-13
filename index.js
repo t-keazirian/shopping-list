@@ -1,8 +1,20 @@
 
 
+
+// DELETE:
+// remove.() the whole <li> and all the contents
+// when delete button is clicked, trigger event to .remove() the <li>
+
+// $(function() {
+//     $('.shopping-item-delete').on("click", "ul", function(event) {
+//         this.remove();
+//     });
+// });
+// */
+
 $(function() {
     $("button[class='shopping-item-delete']").on("click", "li", function(event) {
-        this.remove();
+        this.closest('shopping-item').remove();
     });
 });
 
@@ -11,6 +23,8 @@ $(function() {
 $( "button[class='shopping-item-delete']").click(function(event) {
     this.$( ".shopping-item" ).remove();
   });
+  -- closest() ??
+  -- event.which ??
 
 
 
@@ -54,16 +68,6 @@ $(function() {
     });
 });
 
-
-// DELETE:
-// remove.() the whole <li> and all the contents
-// when delete button is clicked, trigger event to .remove() the <li>
-
-$(function() {
-    $('.shopping-item-delete').on("click", "ul", function(event) {
-        this.remove();
-    });
-});
 */
 
 
