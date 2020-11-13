@@ -13,11 +13,12 @@
 // */
 
 $(function() {
-    $("button[class='shopping-item-delete']").on("click", "li", function(event) {
-        this.closest('shopping-item').remove();
+    $("button[class='shopping-item-delete']").on("click", function(event) {
+        $('.shopping-item').closest('li').remove();
     });
 });
 
+console.log("YOUR NAME");
 
 /*
 $( "button[class='shopping-item-delete']").click(function(event) {
